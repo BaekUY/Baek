@@ -1,0 +1,104 @@
+<!doctype html>
+<head>
+  <title>볼링동아리</title>
+  <style>
+     .logout{color :blue;}
+     a{text-decoration:none; color:black;}
+     .hr{border:1px solid black;}
+     .mainMenu {
+            width:200px;
+            height:30px;
+            margin:0;
+            border:1px solid black;
+            text-align:center;
+            background:white;  
+     }
+     .mainMenu:hover {
+            background:sora;
+            color:black;
+     }
+     .subMenu {
+            position:absolute;
+            margin-left:15px;
+            margin-top:5px;
+            border-collapse:collapse;
+	    visibility:hidden;
+     }
+     .subMenu td {
+            border:0px solid black; 
+            padding:5px;     
+            border-collapse:collapse;    
+            background:clear;
+            color:black;
+     }
+     .subMenu td:hover {
+            background:pink;
+     }
+
+  </style>
+  <script>
+    function showSub(sub){
+        var x=document.getElementById(sub);
+        x.style.visibility='visible';
+    }
+    function hideSub(sub){
+	var y=document.getElementById(sub);
+	y.style.visibility='hidden';
+    }
+</script>
+</head>
+
+<body>
+<body background="image/8.png">
+  <h4><로그인 중>   <a href = "index.html" class="logout"> 로그아웃</a></h4>
+  <a href ="index2.html"><h1 align="center">다함께 굴려보아요 볼~링</h1></a>
+  <hr/>
+
+ 
+  <center><table>
+    <tr>
+      <td class="mainMenu" onmouseover="showSub('sub1')" onmouseout="hideSub('sub1')">볼링의 역사
+	<table class="subMenu" id="sub1">
+	  <tr>
+	    <td><a href="history.html" target="info">역사</a></td>
+	  </tr>
+	</table>
+      </td>
+
+      <td class="mainMenu" onmouseover="showSub('sub2')" onmouseout="hideSub('sub2')">볼링 기초
+	<table class="subMenu" id="sub2">
+	  <tr><td><a href="term/word.html" target="info">용어</a></td>
+	    <td><a href="rule.html" target="info">규칙</a></td>
+	  </tr>
+	</table>
+      </td>
+
+      <td class="mainMenu" onmouseover="showSub('sub3')" onmouseout="hideSub('sub3')">볼링 예절
+	<table class="subMenu" id="sub3">
+	  <tr>
+	    <td><a href="move1.html" target="info">자세</a></td>
+	    <td><a href="ha.html" target="info">매너</a></td>
+	  </tr>
+	</table>
+      </td>
+
+ <td class="mainMenu" onmouseover="showSub('sub4')" onmouseout="hideSub('sub4')">볼링 동영상
+	<table class="subMenu" id="sub4">
+	  <tr>
+	  <td><a href="video.html" target="info">영상</a></td>
+	  </tr>
+	</table>
+      </td>
+     </tr>
+  </table></center>
+<br/><br/><br/>
+
+<center><iframe src="main.html" name="info" frameborder="0" width="1400" height="850" scrolling="yes"> </iframe></center>
+<br/><br/>
+
+<footer>
+	<center><h3>관리자 : 정하은 &nbsp;&nbsp; 학번 :201568053&nbsp;&nbsp;    전주대학교 컴퓨터공학과</h3></center><br/>
+	<audio src="jin.mp3" controls="controls"  autoplay="autoplay"></audio>
+</footer>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<head>
+<title>로그인</title>
+<style>
+.mm{position:relative; align:center;
+		}
+</style>
+</head>
+
+<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+<body background="image/8.png">
+<form id="my_reg_form" method="GET" action="index2.html">
+	<center><h1>로그인</h1></center><hr/>
+	<center>아이디 : <input id="name" type="text" /></center><br/>
+	<center>비밀번호 : <input id="pass" type="password" /></center><br/></br>
+	<center><input type="submit" value="로그인" onclick="login()" />&nbsp;&nbsp;<input type="reset" id="clear" value="다시쓰기"/></center>
+	
+	
+	<script>
+	function Member(name,password){
+	this.name=name;
+	this.password=password;
+	}
+
+	var members=[];
+	members[0]=new Member('정하은',1234);
+	members[1]=new Member('samuel','wjsansrk');
+
+	function login(){
+	var checkname=false, checkpass=false;
+	var name1= document.getElementById("name").value;
+	var pass= document.getElementById("pass").value;
+	for(var i in members){
+		if(members[i].name==name1){
+			checkname=true;
+			if(members[i].password==pass) checkpass=true;
+	}
+	}
+	if (!checkname) alert("회원이 아닙니다.");
+	else if(!checkpass) alert("패스워드가 틀렸습니다.");
+	else alert("환영합니다.");
+	
+	}
+	</script>
+</form>
+</body>
+</body>
+</html>
